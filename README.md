@@ -1,4 +1,4 @@
-# visual-vue-project
+# visual-vue-project
 
 ## Recommended IDE Setup
 
