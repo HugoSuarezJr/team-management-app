@@ -1,4 +1,4 @@
-# visual-vue-project
+# Teams-vue-project
 
 ## Recommended IDE Setup
 
