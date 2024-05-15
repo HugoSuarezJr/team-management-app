@@ -1,15 +1,13 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup>
+import { useFlash } from '@/composables/useFlash';
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+let { flash } = useFlash();
+</script>
+
+<template>
+<div>
+  <p>
+    <button @click="flash('About', 'It Works on the About Page!', 'error')">Click me</button>
+  </p>
+</div>
+</template>
