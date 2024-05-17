@@ -2,7 +2,15 @@
 // import { ref, watch } from 'vue';
 import { useStorage } from '@/composables/useStorage';
 
-let food = useStorage('food', 'salad');
+let food = useStorage('food');
+
+let age = useStorage('age');
+
+let obj = useStorage('obj', { one: 'one' });
+
+setTimeout(() => {
+  obj.value.one = 'changed';
+}, 3000);
 
 </script>
 
@@ -12,5 +20,9 @@ let food = useStorage('food', 'salad');
     What is your favorite food <input type="text" v-model="food" />
   </p>
 
+
+  <p>
+    How old are you<input type="text" v-model="age" />
+  </p>
 </main>
 </template>
