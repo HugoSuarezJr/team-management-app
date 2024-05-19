@@ -1,19 +1,10 @@
 <script setup>
-import TabblableTextarea from "@/components/TabbableTextarea.vue";
-import { ref } from "vue";
 
-let comment = ref('test value');
-
-setTimeout(() => {
-  comment.value = "Changed up baby";
-}, 2000);
-
+import QuizView from '@/components/Quiz/QuizView.vue';
 </script>
 
 <template>
 <main>
-  <form>
-    <TabblableTextarea v-model="comment" style="width: 100%; height: 300px;" />
-  </form>
+  <QuizView :quiz="{ name: 'My first Quiz', questions: [] }"></QuizView>
 </main>
 </template>
